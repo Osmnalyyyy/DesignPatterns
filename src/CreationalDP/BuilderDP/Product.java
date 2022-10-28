@@ -10,10 +10,10 @@ public class Product {
     private String description;
     private int price;
 
-    // default const.
+// default const.
     public Product() {
     }
-    // parametreli const.
+// parametreli const.
     public Product(Long id, String name, LocalDateTime date, boolean inStock, String description, int price) {
         this.id = id;
         this.name = name;
@@ -98,7 +98,7 @@ public class Product {
                 '}';
     }
 
-    public static class ProductBuilder {
+    public static class ProductBuilder{
         private Long id;
         private String name;
         private LocalDateTime date;
@@ -139,3 +139,4 @@ public class Product {
 
     }
 }
+

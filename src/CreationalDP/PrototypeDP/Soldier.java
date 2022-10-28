@@ -11,7 +11,7 @@ public class Soldier implements Cloneable {
     private String weapon;
     private boolean isAvailableForWar;
 
-    //****************       parametreli  constructor
+// ********** PARAMETRELI CONS.
     public Soldier(int health, int speed, int maxLifeTime, int agility, int power, int rank, String weapon, boolean isAvailableForWar) {
         this.health = health;
         this.speed = speed;
@@ -21,11 +21,9 @@ public class Soldier implements Cloneable {
         this.rank = rank;
         this.weapon = weapon;
         this.isAvailableForWar = isAvailableForWar;
-
     }
-
-    //   SOLDIER INFO **************
-    public void showSoldierInfo() {
+    //******* SOLDIER INFO **************
+    public void showSoldierInfo(){
         System.out.println("Sağlık : " + health);
         System.out.println("Hız : " + speed);
         System.out.println("Yaşam Süresi : " + maxLifeTime);
@@ -33,16 +31,14 @@ public class Soldier implements Cloneable {
         System.out.println("Güç : " + power);
         System.out.println("Rütbe : " + rank);
         System.out.println("Silah : " + weapon);
-        if (isAvailableForWar) {
+        if(isAvailableForWar){
             System.out.println("Savaşmaya Hazır");
-        } else {
+        }else {
             System.out.println("Bu asker savaşamaz, yaralı");
         }
 
     }
-
-
-    // *************      Getter-Setter methodları
+// ****** GETTER - SETTER
     public int getHealth() {
         return health;
     }
@@ -109,16 +105,16 @@ public class Soldier implements Cloneable {
 
     @Override
     public Soldier clone() {
-        Soldier soldier = null;
-
+        Soldier soldier = null ;
         try {
-            soldier = (Soldier) super.clone();// Soldier in parentini getirdik
+            soldier  = (Soldier) super.clone();
 
         } catch (CloneNotSupportedException e) {
-            System.out.println("asker kopyalama sırasında hata yaşandı");
+            System.out.println("Asker kopyalama sırasında hata yaşandı !");
             e.printStackTrace();
         }
         return soldier;
     }
-    //****************************************
+
+    //********** GETTER- SETTER - END
 }

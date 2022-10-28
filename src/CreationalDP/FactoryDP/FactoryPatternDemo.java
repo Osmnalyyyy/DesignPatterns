@@ -1,26 +1,22 @@
 package CreationalDP.FactoryDP;
 
 public class FactoryPatternDemo {
+
     public static void main(String[] args) {
-        /*  istenen bir yapı değil
-        Circle circle1=new Circle();
+        /*
+        Circle circle1 = new Circle();
         circle1.draw();
-         */
+        */
 
-// Uretmem gereken her seklin domain sinifini bilmem gerekmiyor,
-// peki bu siniflara ihtiyac olmadan obje uretebilseydim
-
+        // üretmem gereken her şeklin domain sınıfını bilmem gerekmiyor,
+        // peki bu sınıflara ihtiyaç olmadan obje üretebilseydim
         ShapeFactory shapeFactory = new ShapeFactory();
-
-        Shape shape1 = shapeFactory.getShape("circle");
+        Shape shape1 = shapeFactory.getShape("CIRCLE");
         shape1.draw();
-        Shape shape2 = shapeFactory.getShape("rectangle");
+        Shape shape2 = shapeFactory.getShape("RECTANGLE");
         shape2.draw();
-        Shape shape3 = shapeFactory.getShape("square");
+        Shape shape3 = shapeFactory.getShape("SQUARE");
         shape3.draw();
-
-
-
 
     }
 }
